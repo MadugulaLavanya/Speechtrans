@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoiceStream | Real-Time Hindi-English Translator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Phosphor Icons for modern icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+
+<body>
+    <div class="app-container">
+        <header>
+            <div class="logo">
+                <i class="ph-fill ph-translate"></i>
+                <span class="logo-text">VoiceStream</span>
+            </div>
+        </header>
+
+        <main>
+            <div class="status-indicator">
+                <div class="status-dot"></div>
+                <span id="status-text">Ready to start</span>
+            </div>
+
+            <div class="translation-stage">
+                <!-- Hindi Input Card -->
+                <div class="card source-card">
+                    <div class="card-header">
+                        <select id="source-lang" class="lang-select">
+                            <!-- Options populate via JS -->
+                        </select>
+                        <i class="ph ph-microphone"></i>
+                    </div>
+                    <div class="text-content" id="hindi-output">
+                        <span class="placeholder">Listening...</span>
+                    </div>
+                </div>
+
+                <!-- Arrow Divider -->
+                <div class="flow-indicator">
+                    <i class="ph-bold ph-arrow-down"></i>
+                </div>
+
+                <!-- English Output Card -->
+                <div class="card target-card">
+                    <div class="card-header">
+                        <select id="target-lang" class="lang-select">
+                            <!-- Options populate via JS -->
+                        </select>
+                        <i class="ph ph-speaker-high"></i>
+                    </div>
+                    <div class="text-content" id="english-output">
+                        <span class="placeholder">Translation will appear here...</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="controls">
+                <button id="toggle-recording" class="primary-btn">
+                    <div class="btn-content">
+                        <i class="ph-fill ph-microphone"></i>
+                        <span>Start Listening</span>
+                    </div>
+                    <div class="wave-animation"></div>
+                </button>
+            </div>
+        </main>
+
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
